@@ -478,7 +478,7 @@ int main() {
                         prod.display(v1);
                         break;
                     default:
-                        cout << "Your Choice Incorrect.\n";
+                        cout << "Your Choice  Incorrect.\n";
                         break;
                     }
                     break;
