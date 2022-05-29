@@ -4,7 +4,7 @@
 using namespace std;
 
 Product::Product() = default;
-void Product::sort( vector<Product> &v1) {
+void Product::sort(vector<Product> &v1) {
     double max;
     for (int i = 0; i < v1.size(); i++)
     {
@@ -34,6 +34,7 @@ void Product::display(vector<Product> v1) {
         cout << "product categorey: " << v1[i].Category << endl;
         cout << "product quantity: " << v1[i].Quantity << endl;
         cout << "product rate: " << v1[i].totalrate << endl;
+        cout << "seller id: " << v1[i].SellerID << endl;
         cout << "------------------------------------------" << endl;
     }
     cout << "***" << endl;
@@ -59,6 +60,7 @@ void Product::Entrate(Product prod, vector<Product> &v1) {
             cout << "Category: " << v1[i].Category << endl;
             cout << "Quantity: " << v1[i].Quantity << endl;
             cout << "product rate: " << v1[i].totalrate << endl;
+            cout << "seller id: " << v1[i].SellerID << endl;
         }
     }
     int y;
@@ -66,7 +68,7 @@ void Product::Entrate(Product prod, vector<Product> &v1) {
     cin >> y;
     switch (y) {
     case 1:
-        Entrate(prod,v1);
+        Entrate(prod, v1);
         break;
     case 2:
         break;

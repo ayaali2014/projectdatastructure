@@ -4,7 +4,7 @@
 
 using namespace std;
 static bool flag = false;
-static long  totalpricefinal=0;
+static long  totalpricefinal = 0;
 static string name;
 void to_upper() {
     size_t findCaseInsensitive(string name, string toSearch, long pos = 0); {
@@ -33,7 +33,7 @@ void Customer::BrowseprodByCategory(vector<Product> v1) {
                 cout << "ProdPrice: " << v1[i].ProdPrice << endl;
                 cout << "Quantity: " << v1[i].Quantity << endl;
                 cout << "rate: " << v1[i].totalrate << endl;
-                cout << "******" << endl;
+                cout << "**" << endl;
             }
         }
         break;
@@ -46,7 +46,7 @@ void Customer::BrowseprodByCategory(vector<Product> v1) {
                 cout << "ProdPrice: " << v1[i].ProdPrice << endl;
                 cout << "Quantity: " << v1[i].Quantity << endl;
                 cout << "rate: " << v1[i].totalrate << endl;
-                cout << "******" << endl;
+                cout << "**" << endl;
             }
         }
         break;
@@ -59,7 +59,7 @@ void Customer::BrowseprodByCategory(vector<Product> v1) {
                 cout << "ProdPrice: " << v1[i].ProdPrice << endl;
                 cout << "Quantity: " << v1[i].Quantity << endl;
                 cout << "rate: " << v1[i].totalrate << endl;
-                cout << "******" << endl;
+                cout << "**" << endl;
             }
         }
         break;
@@ -72,7 +72,7 @@ void Customer::BrowseprodByCategory(vector<Product> v1) {
                 cout << "ProdPrice: " << v1[i].ProdPrice << endl;
                 cout << "Quantity: " << v1[i].Quantity << endl;
                 cout << "rate: " << v1[i].totalrate << endl;
-                cout << "******" << endl;
+                cout << "**" << endl;
             }
         }
         break;
@@ -82,8 +82,8 @@ void Customer::BrowseprodByCategory(vector<Product> v1) {
     }
 };
 
-void Customer::BrowseprodByName(Product prod , vector<Product>& v1) {
-    
+void Customer::BrowseprodByName(Product prod, vector<Product>&v1) {
+
     cout << "Enter Name Of Product: \n";
     cin >> name;
     to_upper();
@@ -97,10 +97,10 @@ void Customer::BrowseprodByName(Product prod , vector<Product>& v1) {
             cout << "ProdPrice: " << v1[i].ProdPrice << endl;
             cout << "Category: " << v1[i].Category << endl;
             cout << "Quantity: " << v1[i].Quantity << endl;
-            flag = true;
+            flag = false;
         }
     }
-    if (flag == false) {
+    if (flag == true) {
         cout << "Sorry, unavialable product \n";
         BrowseprodByName(prod, v1);
     }
@@ -138,7 +138,7 @@ void Customer::AddProductToCart(vector<Product> v1) {
         {
             if (name == v1[i].proName) {
                 cout << "the price:" << v1[i].ProdPrice << "\n" << "the available quantity:" << v1[i].Quantity << endl;
-                cout << "________________" << endl;
+                cout << "__" << endl;
                 cout << "enter the quantity which you need " << endl;
                 cin >> quantity;
                 if (v1[i].Quantity >= quantity) {
@@ -169,9 +169,9 @@ void Customer::AddProductToCart(vector<Product> v1) {
             }
         }
         if (flag == true) {
-            cout << "****************" << endl;
+            cout << "**" << endl;
             cout << "not match, please enter right name " << endl;
-            cout << "****************" << endl;
+            cout << "**" << endl;
 
             cout << "------------------------------------------------------------" << endl;
             cout << "please enter the name of product again to confirm \n";
@@ -182,7 +182,7 @@ void Customer::AddProductToCart(vector<Product> v1) {
             {
                 if (name == v1[i].proName) {
                     cout << "the price:" << v1[i].ProdPrice << "\n" << "the available quantity:" << v1[i].Quantity << endl;
-                    cout << "________________" << endl;
+                    cout << "__" << endl;
                     cout << "enter the quantity which you need " << endl;
                     cin >> quantity;
                     if (v1[i].Quantity >= quantity) {
@@ -218,11 +218,12 @@ void Customer::AddProductToCart(vector<Product> v1) {
         break;
 
     case 2:
-        BrowseprodByCategory( v1);
+        BrowseprodByCategory(v1);
 
         cout << "**" << endl;
         cout << "enter the name of product " << endl;
         cin >> name;
+        to_upper();
         cout << "enter the product id " << endl;
         cin >> id;
 
@@ -230,7 +231,7 @@ void Customer::AddProductToCart(vector<Product> v1) {
         {
             if (name == v1[i].proName && id == v1[i].ID) {
                 cout << "the price:" << v1[i].ProdPrice << "\n" << "the available quantity:" << v1[i].Quantity << endl;
-                cout << "________________" << endl;
+                cout << "__" << endl;
                 cout << "enter the quantity which you need " << endl;
                 cin >> quantity;
                 if (v1[i].Quantity >= quantity) {

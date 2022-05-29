@@ -7,7 +7,7 @@
 
 using namespace std;
 
- 
+
 class Product
 {
 public:
@@ -19,11 +19,11 @@ public:
     int rate;
     double total;
     double totalrate;
-   
+    int SellerID;
 
     Product();
-    void sort( vector<Product>& v1);
+    void sort(vector<Product>& v1);
     void display(vector<Product>v1);
     void Entrate(Product, vector<Product>& v1);
     ~Product(void);
-};
+}; 
